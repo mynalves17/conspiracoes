@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ɐıɹo̗ʇsıH ɐnS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="./img/Emblema do Olho Cósmico.png" alt="Logo Teorias da Conspiração">
+          <div class="logo-text">
+            <h1>TEORIAS DA</h1>
+            <h1 class="destaque">CONSPIRAÇÃO</h1>
+            <p>QUESTIONE <span>◆</span> INVESTIGUE <span>◆</span> DESCUBRA</p>
+          </div>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="artigos.html">Artigos</a></li>
+            <li><a href="#" class="active">Sua História</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="loginFormulario.html">Login</a></li>
+          </ul>
+        </nav>
+        <form class="search-form" action="artigos.html" role="search">
+          <input type="search" name="q" placeholder="Pesquisar no site" aria-label="Pesquisar no site">
+          <button class="search-toggle" type="button" aria-label="Abrir pesquisa" aria-expanded="false">⌕</button>
+        </form>
+      </div>
+    </header>
+
+    <main class="login-page">
+      <div class="container">
+        <div class="row justify-content-center align-items-center w-100">
+          <div class="col-12 col-md-8 col-lg-6 d-flex justify-content-center">
+            <form class="login-card" action="sobre.html">
+              <h2 class="login-title">Conte-nos sua História!</h2>
+
+              <div class="mb-3">
+                <label for="nomeHistoria" class="form-label">Nome ou Apelido</label>
+                <input type="text" class="form-control" id="nomeHistoria" placeholder="Digite seu nome/apelido"
+                  required>
+              </div>
+              <br>
+              <div class="mb-3">
+                <label for="dataPublicacao" class="form-label">Data de publicação</label>
+                <input type="date" class="form-control" id="dataPublicacao" required>
+              </div>
+              <br>
+              <div class="mb-3">
+                <label for="categoriaHistoria" class="form-label">Categoria da conspiração: </label>
+                <select class="form-select" id="categoriaHistoria" aria-label="Selecione a categoria da conspiração">
+                  <option selected>Selecione uma categoria</option>
+                  <option value="governo">Governo</option>
+                  <option value="tecnologia">Tecnologia</option>
+                  <option value="espaco">Espaço</option>
+                  <option value="saude">Saúde</option>
+                  <option value="educacao">Educação</option>
+                  <option value="outros">Outros</option>
+                </select>
+              </div>
+              <br>
+
+              <div class="mb-3">
+                <label for="historiaTexto" class="form-label">Sua história</label>
+                <textarea class="form-control" id="historiaTexto" rows="6" placeholder="Escreva sua história aqui..."
+                  required></textarea>
+              </div>
+              <br>
+
+              <div class="mb-3">
+                <label for="linkComprovacao" class="form-label">Link de comprovação</label>
+                <input type="url" class="form-control" id="linkComprovacao"
+                  placeholder="https://exemplo.com/comprovacao">
+              </div>
+              <br>
+
+              <div class="mb-3">
+                <label class="form-label">Como você classificaria essa informação?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="classificacaoInfo" id="curiosidade" checked>
+                  <label class="form-check-label" for="curiosidade">Curiosidade</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="classificacaoInfo" id="aindaDuvida">
+                  <label class="form-check-label" for="aindaDuvida">Ainda tenho dúvidas</label>
+                </div>
+              </div>
+              <br>
+
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" value="" id="confirmacaoEducativa" required>
+                <label class="form-check-label" for="confirmacaoEducativa">
+                  Confirmo que este envio é para fins educativos e que não estou apresentando a teoria como fato
+                  comprovado.
+                </label>
+              </div>
+              <br>
+
+              <button type="submit" class="btn-solid theme-primary">Enviar história</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Instituto Federal de Educação, Ciência e Tecnologia de São Paulo - Campus Presidente Epitácio</p>
+        <p>Desenvolvido por Yasmin Alves e Ludymila Knopp
+        <p>&copy; 2026 Teorias da Conspiração. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+
+  </body>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+    crossorigin="anonymous"></script>
+
+  <script src="search-toggle.js"></script>
+
+  </html>

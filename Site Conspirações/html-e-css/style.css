@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.case-page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.case-main {
+    display: grid;
+    width: min(100% - 3rem, 1100px);
+    flex: 1;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.7fr);
+    align-content: center;
+    align-items: start;
+    gap: clamp(2rem, 6vw, 5rem);
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.case-main .case-title {
+    width: fit-content;
+    margin: 0;
+    text-align: left;
+}
+
+.case-copy {
+    color: #ffffff;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.case-copy p {
+    margin: 0 0 1.25rem;
+}
+
+.case-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.header {
+   background-image: url(img/Painel\ de\ Mistérios\ e\ Conspirações.png);
+    border-bottom: 1px solid #252c33;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.7);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.logo-text h1 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    font-family: 'Times New Roman', Times, serif;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+}
+
+.logo-text .destaque {
+    color: #e63946;
+    font-size: 32px;
+    font-family:'Courier New', Courier, monospace; 
+    font-style:italic;
+    -webkit-text-stroke: 0.1px #e63946;
+}
+
+.logo-text p {
+    color: #cccccc;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+.logo-text p span {
+    color: #e63946;
+    margin: 0 5px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+    padding-bottom: 8px;
+}
+
+.nav-menu a:hover {
+    color: #e63946;
+}
+
+.nav-menu a.active {
+    color: #e63946;
+    border-bottom: 2px solid #e63946;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-form input {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    border: 0;
+    transition: width 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.search-form.is-open input {
+    width: 180px;
+    padding: 8px 10px;
+    opacity: 1;
+    color: #ffffff;
+    background-color: #111111;
+    border: 1px solid #343434;
+    border-radius: 4px;
+}
+
+.search-form button {
+    padding: 0;
+    color: #ffffff;
+    background: none;
+    border: 0;
+    font-size: 35px;
+    line-height: 1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-form button:hover {
+    color: #e63946;
+}
+
+.search-result {
+    min-height: 1.5rem;
+    margin-bottom: 1rem;
+    color: #cccccc;
+    text-align: center;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: calc(100vh - 110px);
+}
+
+.login-page .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-page .row {
+    width: 100%;
+    margin: 0;
+}
+
+.login-card {
+    width: min(100%, 440px);
+    margin: 0 auto;
+    padding: 2rem 1.7rem;
+    background: rgba(17, 17, 17, 0.92);
+    border: 1px solid #343434;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.35);
+}
+
+.login-title {
+    margin: 0 0 1rem;
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.login-card .form-label,
+.login-card .form-text,
+.login-card .form-field label {
+    font-size: 0.92rem;
+}
+
+.login-card .form-control {
+    min-height: 2.9rem;
+    font-size: 0.96rem;
+}
+
+.login-card .btn-solid.theme-primary {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 0.96rem;
+}
+
+#carouselExample,
+#carouselExampleInterval {
+    max-width: 900px;
+    margin: 30px auto 50px;
+}
+
+#carouselExample img,
+#carouselExampleInterval img {
+    height: 400px;
+    object-fit: contain;
+}
+
+.cards-section {
+    max-width: 1100px;
+    margin: 0 auto 50px;
+    padding: 0 30px;
+}
+
+.article-list {
+    max-width: 1280px;
+    margin: 0 auto 50px;
+    padding: 0 24px;
+}
+
+.article-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.25rem;
+}
+
+.article-card {
+    overflow: hidden;
+    color: #e5e5e5;
+    background: linear-gradient(145deg, #191919, #0b0b0b);
+    border: 1px solid #343434;
+    border-left: 3px solid #800020;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.45);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.article-card:hover {
+    border-color: #e63946;
+    transform: translateY(-4px);
+}
+
+.article-card img {
+    display: block;
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    filter: saturate(0.8);
+}
+
+.article-card-body {
+    padding: 0.9rem;
+}
+
+.article-card h2 {
+    margin: 0 0 0.55rem;
+    color: #e63946;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.article-card p {
+    margin: 0;
+    color: #cccccc;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.cards-grid .col {
+    display: flex;
+    min-width: 0;
+}
+
+.cards-grid .home-card {
+    width: 100%;
+    overflow: hidden;
+    color: #ffffff;
+    background-color: #111111;
+    border: 1px solid #343434;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.cards-grid .home-card:hover {
+    border-color: #e63946;
+    transform: translateY(-4px);
+}
+
+.cards-grid .card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.cards-grid .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.cards-grid .card-title {
+    margin-bottom: 0.5rem;
+    color: #e63946;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.cards-grid .card-text {
+    margin-bottom: 0;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+
+    .container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .nav-menu ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .case-main {
+        width: min(100% - 2rem, 1100px);
+        grid-template-columns: 1fr;
+        align-content: start;
+        gap: 1rem;
+        padding: 2rem 0;
+    }
+
+    .case-main .case-title {
+        margin: 0;
+    }
+
+    .case-copy {
+        font-size: 1rem;
+    }
+
+    #carouselExample img,
+    #carouselExampleInterval img {
+        height: 240px;
+    }
+
+    .article-list {
+        padding: 0 15px;
+    }
+
+    .article-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-section {
+        padding: 0 15px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-grid .card-img-top {
+        height: auto;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .logo-text h1 {
+        font-size: 21px;
+    }
+
+    .logo-text .destaque {
+        font-size: 23px;
+    }
+
+    .logo-text p {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .nav-menu ul {
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+}
+
+h1{
+    text-align: center;
+    color:rgb(156, 155, 154);
+    font-family:'Times New Roman', Times, serif;
+    font-style:italic;
+    -webkit-text-stroke: 0.5px rgb(128, 12, 12);
+}
+
+h3{
+    text-align: center;
+    color:rgb(153, 20, 5);
+    font-style:oblique;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.outlined-heading {
+    width: fit-content;
+    max-width: calc(100% - 24px);
+    margin: 12px auto;
+    padding: 6px 12px;
+    border: 1px solid #800020;
+    border-radius: 8px;
+    box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.12);
+}
+
+.form-label{
+    color: white;
+}
+.footer {
+    background-color: #111111;
+    color: #cccccc;
+    padding: 24px 20px;
+    text-align: center;
+    border-top: 1px solid #252c33;
+    background-image: url(img/Painel\ de\ Mistérios\ e\ Conspirações.png);
+}
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+}
+
+.footer p {
+    margin: 0;
+    line-height: 1.5;
+    max-width: 760px;
+}
+
+.text-center {
+    color: white;
+}
+
+.about-main {
+    display: block;
+    min-height: calc(100vh - 260px);
+}
+
+.about-content {
+    color: #e5e5e5;
+}
+
+.about-content .outlined-heading {
+    margin-bottom: 1.5rem;
+}
+
+.about-intro {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.about-copy {
+    color: #cccccc;
+    line-height: 1.7;
+}
+
+.about-details {
+    margin-top: 2rem;
+}
+
+.about-details h2 {
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+.about-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #343434;
+}
+
+.about-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #e5e5e5;
+    background: #111111;
+}
+
+.about-table caption {
+    padding: 0.8rem 1rem;
+    color: #cccccc;
+    text-align: left;
+    background: #191919;
+}
+
+.about-table th,
+.about-table td {
+    padding: 0.9rem 1rem;
+    border-top: 1px solid #343434;
+    text-align: left;
+    vertical-align: top;
+}
+
+.about-table th {
+    width: 30%;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.about-table tbody tr:hover {
+    background: #1b1b1b;
+}
+
+label{
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .about-main {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .about-intro {
+        font-size: 1.05rem;
+    }
+
+    .about-table th,
+    .about-table td {
+        min-width: 150px;
+        padding: 0.75rem;
+    }
+}
+
+.casos {
+    color: white;
+}
+
+.navdonav{
+    color:#800020;
+}
